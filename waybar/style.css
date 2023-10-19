@@ -1,10 +1,16 @@
 * {
-  font-size: 16px;
+  font-size: 15px;
   font-family: "JetBrainsMono Nerd Font";
   font-weight: 700;
 }
 
 window#waybar {
+    background: #282c34;
+    color: #fcfcfc;
+}
+
+#workspaces {
+    padding-right: 10px;
     background: #282c34;
     color: #fcfcfc;
 }
@@ -16,12 +22,6 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background: #5c6667;
-    color: #fcfcfc;
-}
-
-#mode {
-    padding: 0 5px;
     background: #5c6667;
     color: #fcfcfc;
 }
