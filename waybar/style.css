@@ -5,23 +5,23 @@
 }
 
 window#waybar {
-    background: #282c34;
-    color: #fcfcfc;
+    background: #1a1b26;
+    color: #d2d9f8;
 }
 
 #workspaces {
     padding-right: 10px;
-    background: #282c34;
-    color: #fcfcfc;
+    background: #1a1b26;
+    color: #d2d9f8;
 }
 
 #workspaces button {
     padding: 0 5px;
-    background: #282c34;
-    color: #fcfcfc;
+    background: #1a1b26;
+    color: #d2d9f8;
 }
 
 #workspaces button.active {
-    background: #5c6667;
-    color: #fcfcfc;
+    background: #5e5f67;
+    color: #d2d9f8;
 }

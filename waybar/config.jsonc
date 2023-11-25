@@ -1,7 +1,7 @@
 {
   "spacing": 0,
   "layer": "bottom",
-  "height": 33,
+  "height": 26,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
   "modules-right": ["hyprland/language", "pulseaudio",  "battery", "memory", "network"],
@@ -14,8 +14,8 @@
 
   "hyprland/language": {
     "format": "<span font_desc='JetBrainsMono Nerd Font Medium 16'>󰌌 </span><span rise='2000'>{}   </span>",
-    "format-ru": "RU",
-    "format-en": "EN"
+    "format-ru": "ru",
+    "format-en": "en"
   },
 
   "pulseaudio": {
