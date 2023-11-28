@@ -3,8 +3,8 @@
   "layer": "bottom",
   "height": 26,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["clock"],
-  "modules-right": ["hyprland/language", "pulseaudio",  "battery", "memory", "network"],
+  // "modules-center": ["clock"],
+  "modules-right": ["hyprland/language", "backlight", "pulseaudio",  "battery", "memory", "network", "clock"],
 
   "hyprland/workspaces": {
     "all-outputs": true,
@@ -13,48 +13,47 @@
   },
 
   "hyprland/language": {
-    "format": "<span font_desc='JetBrainsMono NF Medium 16'>󰌌 </span><span rise='2000'>{}   </span>",
+    "format": "<span size='16pt'>󰌌 </span><span rise='2000'>{}   </span>",
     "format-ru": "ru",
     "format-en": "en"
   },
 
+  "backlight": {
+    "format": "<span size='16pt'>{icon} </span><span rise='2700'>{percent}%</span>   ",
+    "format-icons": ["󰖨"]
+  },
+
   "pulseaudio": {
-    "format-muted": "<span font_desc='JetBrainsMono NF Medium 18'>{icon}</span> <span rise='2700'>muted   </span>",
+    "format-muted": "<span size='18pt'>{icon}</span> <span rise='2700'>muted   </span>",
     "format-icons": ["󰕿", "󰖀", "󰕾"],
     "format": "<span font_desc='JetBrainsMono NF Medium 18'>{icon}</span> <span rise='2700'>{volume}%   </span>"
   },
 
   "battery": {
-    "format": "<span font_desc='JetBrainsMono NF Medium 14' letter_spacing='-1000'>{icon}  </span>{capacity}%   ",
+    "format": "<span size='14pt' letter_spacing='-1000'>{icon}  </span>{capacity}%   ",
     "format-icons": ["", "", "", "", ""]
   },
 
-  "clock": {
-    "format": "<span font_desc='JetBrainsMono NF Medium 16'> </span><span rise='2000'>{:%H:%M}   </span>",
-    "timezone": "Asia/Krasnoyarsk"
-  },
-
-  "network": {
-    "format": "<span font_desc='JetBrainsMono NF Medium 15' letter_spacing='-1000' rise='-1500'>{icon} </span>{essid} ",
-    "format-icons": ["󰣾", "󰣴", "󰣶", "󰣸", "󰣺"],
-    "format-disconnected": "<span font_desc='JetBrainsMono NF Medium 15' letter_spacing='-1000' rise='-1500'>󰣽 </span>disconnected ",
-    "interval": 2
-  },
-
   "memory": {
-    "format": "<span font_desc='JetBrainsMono NF Medium 14' letter_spacing='1000'> </span>{used}Gi   ",
+    "format": "<span size='14pt' letter_spacing='1000'> </span>{used}Gi   ",
     "interval": 2
   },
 
   "custom/mem": {
     "exec": "free -h | awk '(NR==2) {print $3}'",
-    "format": "<span font_desc='JetBrainsMono NF Medium 15' letter_spacing='-1000' rise='-1500'> </span>{}   ",
+    "format": "<span size='15pt' letter_spacing='-1000' rise='-1500'> </span>{}   ",
     "interval": 2
   },
 
-  "custom/clients": {
-    "exec": "hyprctl activeworkspace -j | jq .windows",
-    "format": "[{}] ",
-    "interval": 1
+  "network": {
+    "format": "<span font_desc='JetBrainsMono NF Medium 15' letter_spacing='-1000' rise='-1500'>{icon} </span>{essid}   ",
+    "format-icons": ["󰣾", "󰣴", "󰣶", "󰣸", "󰣺"],
+    "format-disconnected": "<span font_desc='JetBrainsMono NF Medium 15' letter_spacing='-1000' rise='-1500'>󰣽 </span>disconnected   ",
+    "interval": 2
+  },
+
+  "clock": {
+    "format": "<span size='16pt'> </span><span rise='2000'>{:%H:%M} </span>",
+    "timezone": "Asia/Krasnoyarsk"
   }
 }
