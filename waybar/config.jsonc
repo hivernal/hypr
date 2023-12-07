@@ -1,7 +1,7 @@
 {
   "spacing": 0,
   "layer": "bottom",
-  "height": 26,
+  "height": 33,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   // "modules-center": ["clock"],
   "modules-right": ["hyprland/language", "backlight", "pulseaudio",  "battery", "memory", "network", "clock"],
