@@ -1,6 +1,6 @@
 {
   "spacing": 0,
-  "layer": "bottom",
+  "layer": "top",
   "height": 33,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   // "modules-center": ["clock"],
@@ -13,47 +13,48 @@
   },
 
   "hyprland/language": {
-    "format": "<span size='16pt'>󰌌 </span><span rise='2000'>{}   </span>",
+    "format": "<span size='16pt'>󰌌</span> <span rise='2000'>{}</span>   ",
     "format-ru": "ru",
     "format-en": "en"
   },
 
   "backlight": {
-    "format": "<span size='16pt'>{icon} </span><span rise='2700'>{percent}%</span>   ",
+    "format": "<span size='16pt' letter_spacing='-15000'>{icon}</span>  <span rise='2000'>{percent}%</span>   ",
     "format-icons": ["󰖨"]
   },
 
   "pulseaudio": {
-    "format-muted": "<span size='18pt'>{icon}</span> <span rise='2700'>muted   </span>",
+    "format-muted": "<span size='18pt'>{icon}</span> <span rise='3125'>muted</span>   ",
     "format-icons": ["󰕿", "󰖀", "󰕾"],
-    "format": "<span font_desc='JetBrainsMono NF Medium 18'>{icon}</span> <span rise='2700'>{volume}%   </span>"
+    "format": "<span size='18pt' letter_spacing='-3000'>{icon}</span> <span rise='3125'>{volume}%</span>   "
   },
 
   "battery": {
-    "format": "<span size='14pt' letter_spacing='-1000'>{icon}  </span>{capacity}%   ",
+    "format": "<span size='14pt' letter_spacing='-4000'>{icon}</span>  <span rise='625'>{capacity}%</span>   ",
     "format-icons": ["", "", "", "", ""]
   },
 
   "memory": {
-    "format": "<span size='14pt' letter_spacing='1000'> </span>{used}Gi   ",
+    "format": "<span size='15pt' letter_spacing='-1000'> </span><span rise='1250'>{used}Gi</span>   ",
     "interval": 2
   },
 
   "custom/mem": {
     "exec": "free -h | awk '(NR==2) {print $3}'",
-    "format": "<span size='15pt' letter_spacing='-1000' rise='-1500'> </span>{}   ",
+    "format": "<span size='15pt'></span> <span rise='1250'>{}</span>   ",
     "interval": 2
   },
 
   "network": {
-    "format": "<span font_desc='JetBrainsMono NF Medium 15' letter_spacing='-1000' rise='-1500'>{icon} </span>{essid}   ",
-    "format-icons": ["󰣾", "󰣴", "󰣶", "󰣸", "󰣺"],
-    "format-disconnected": "<span font_desc='JetBrainsMono NF Medium 15' letter_spacing='-1000' rise='-1500'>󰣽 </span>disconnected   ",
+    "format-icons": ["󰤭","󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    // "format-icons": [󰣾", "󰣴", "󰣶", "󰣸", "󰣺"],
+    "format": "<span size='15pt' letter_spacing='1000'>{icon}</span> <span rise='1250'>{essid}</span>   ",
+    "format-disconnected": "<span size='15pt' letter_spacing='1000'>{icon}</span> <span rise='1250'>disconnected</span>   ",
     "interval": 2
   },
 
   "clock": {
-    "format": "<span size='16pt'> </span><span rise='2000'>{:%H:%M} </span>",
+    "format": "<span size='16pt'></span> <span rise='2000'>{:%H:%M}</span> ",
     "timezone": "Asia/Krasnoyarsk"
   }
 }
